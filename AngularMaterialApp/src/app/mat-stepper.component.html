@@ -1,0 +1,40 @@
+<mat-stepper  #stepper labelPosition="bottom" orientation="vertical">
+
+    <mat-step [stepControl]="formGroupOne" errorMessage="Name is required.">
+        <ng-template matStepLabel>Fill Name</ng-template>
+        <form [formGroup]="formGroupOne">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter Name</mat-label>
+                <input matInput formControlName="name"  placeholder="Enter Name" required>
+            </mat-form-field>
+
+            <button mat-button color="primary" matStepperNext>Next</button>
+        </form>
+        
+    </mat-step>
+
+    <mat-step [stepControl]="formGroupTwo" [editable]="true" errorMessage="Mobile is Required">
+        <ng-template matStepLabel>Fill Mobile</ng-template>
+        <ng-template matStepContent>
+            <p>This Content Loaded Lazily</p>
+            <form [formGroup]="formGroupTwo">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Mobile</mat-label>
+                    <input matInput type="number" formControlName="mobile"  placeholder="Enter Mobile" required>
+                </mat-form-field>
+    
+                <button mat-button color="primary" matStepperPrevious>Previous</button>
+                <button mat-button color="primary" matStepperNext>Next</button>
+                
+            </form>
+        </ng-template>
+       
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div color="primary" mat-header>Your Done</div>
+        <button mat-button color="primary" matStepperPrevious>Previous</button>
+        <button mat-button color="warn"  (click)="stepper.reset()">Reset</button>
+    </mat-step>
+</mat-stepper>

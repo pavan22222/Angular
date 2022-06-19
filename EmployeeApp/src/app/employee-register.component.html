@@ -1,0 +1,22 @@
+<div class="container-fluid ng-form card" style="width:400px;background-color: cyan;margin-top: 100px;">
+    <p class="text-center" style="color:red;font-weight: bold;font-size:large;font-family: Arial, Helvetica, sans-serif;">Employee Registartion
+    </p>
+
+    <form #myForm myForm="ngForm" (ngSubmit)="register()" class="form-group ">
+        <label>Enter Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="name" />
+        <span class="text-danger" *ngIf="nameValidationMsg">{{nameValidationMsg}}</span><br>
+
+        <label>Enter Age</label>
+        <input type="text" name="age" class="form-control" [(ngModel)]="age" />
+        <span class="text-danger" *ngIf="ageValidationMsg">{{ageValidationMsg}}</span><br>
+
+        <label>Enter Email</label>
+        <input type="text" name="email" class="form-control" [(ngModel)]="email" />
+        <span class="text-danger" *ngIf="emailValidationMsg">{{emailValidationMsg}}</span><br>
+
+        <input type="submit" class="btn btn-success" value="Register" /><br>
+
+        <p>{{msg}}</p>
+    </form>
+</div>

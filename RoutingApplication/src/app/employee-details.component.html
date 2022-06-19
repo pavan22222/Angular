@@ -1,0 +1,13 @@
+<table align="center" bgcolor="cyan" border="2" width="400px">
+    <thead style="background-color: chartreuse;color: darkblue;font-size: larger;font-weight: bold;font-style: inherit;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <tr><td>ID</td><td>Name</td><td>Age</td><td>Salary</td></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeData">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.salary}}</td>
+        </tr>
+    </tbody>
+</table>

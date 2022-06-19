@@ -1,0 +1,28 @@
+button , a{
+    margin-left: 20px;
+  }
+
+div {
+    display: table-cell;
+    display: table;
+}
+
+section {
+    margin-top: 10px;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 600px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 100px;
+  }

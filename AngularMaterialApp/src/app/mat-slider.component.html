@@ -1,0 +1,9 @@
+
+<mat-card>
+    <diV>
+        <label style="padding-left: 60px;">Max Value</label>
+        <label style="padding-left: 100px;">{{range.value}}</label>
+    </diV>
+    <mat-label>Salary Range</mat-label>
+    <mat-slider #range="ngModel" min="10" max="200" ngModel thumbLabel="true"></mat-slider>
+</mat-card>

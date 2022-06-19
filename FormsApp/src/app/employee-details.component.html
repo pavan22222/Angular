@@ -1,0 +1,40 @@
+
+<div class="container">
+<div class="row">
+    <div class="col-8"  >
+
+    <div class="card-body" style="margin-left:300px ;">
+
+        <h2 class="card-title">Registartion Form</h2>
+        <form class="form-horizontal" class="form-group" #form="ngForm" (ngSubmit)="onSave(form)">
+            <label for="name" style="color:blue">Enter Name</label>
+
+            <input id="name" [ngStyle]="{'border-color':ename.valid?'green':'red'}"   type="text" [(ngModel)]="name"
+                name="name" #ename="ngModel" required class="ng-pristine form-control" />
+            <span ngClass="class1" class="text-danger" *ngIf="ename.touched && ename.invalid && ename.errors">Name
+                Required</span>
+            <br>
+            <label style="color:blue"> Enter Mobile </label>
+
+            <input type="number" [(ngModel)]="phoneNumber" name="phoneNumber" #emobile="ngModel" required
+                class="form-control"><span class='class1' *ngIf="!emobile.valid">Mobile No
+                Required</span>
+            <br>
+            <label style="color:blue"> Enter Mail</label>
+
+            <input type="text" [(ngModel)]="email" #eMail="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                name="email" required="required" class="form-control">
+
+            <span class="text-danger" *ngIf="!eMail.valid">Mobile is Required</span>
+            <input type="submit" class="btn btn-success" value="save" [disabled]="!form.form.valid">
+
+            <br><br>{{msg}}
+        </form>
+
+    </div>
+</div>
+
+
+</div>
+
+</div>

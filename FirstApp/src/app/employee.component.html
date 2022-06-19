@@ -1,0 +1,43 @@
+<div style="margin: 150px;margin-left: 400px;border: solid 2px red;width:300px"><h3 style="border: solid green 2px;color: lightseagreen;width: 200px;margin-left: 40px;"> Employee Information</h3>
+    <table style="background-color: cyan">
+        <tr><label>Id:</label>{{emp.id}}</tr>
+        <tr><label>Name:</label>{{emp.name | titlecase}}</tr>
+        <tr><label>Salary:</label>{{emp.salary | number:'3.4-7'}}</tr>
+        <tr><label>Designation:</label>{{emp.designation}}</tr>
+        <tr><label>DOB:</label>{{emp.dob|date:'full'}}</tr>
+        <tr><label>Select Language</label>
+            <select [(ngModel)]="language">
+                <option value="1">English</option>
+                <option value="2">French</option>
+                <option value="3">Spanish</option>
+            </select></tr>
+        <tr><p *ngIf="language">{{language | i18nSelect:mapObject}} </p></tr>
+    </table>
+
+    <p>{{emp | json}}</p>
+
+    
+
+    <div>
+        <ul *ngFor="let obj of object |  keyvalue">{{obj.key }}:{{obj.value}}</ul>
+    </div>
+
+    <div>
+        <ul *ngFor="let item of map | keyvalue">{{item.key }}:{{item.value}}</ul>
+    </div>
+
+    <p>{{percentage | percent:'2.4-7'}}</p>
+
+    <p>{{percentage }}</p>
+
+    <p>{{name | slice:-8:-4}}</p>
+
+    <div>
+        <label>Enter Number</label><input type="number" [(ngModel)]="alphaNumber">
+        <br>
+        {{alphaNumber | numbertostring}}
+    </div>
+
+
+</div>
+

@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-title>Select a Course</mat-card-title>
+    <section >
+        <mat-checkbox [(ngModel)]="java" style="display: flex;">Java</mat-checkbox>
+        <mat-checkbox [(ngModel)]="python" style="display: flex;">Python</mat-checkbox>
+        <mat-checkbox [(ngModel)]="php" style="display: flex;">Php</mat-checkbox>
+    </section>
+
+    <mat-card-content>
+        Java::{{java}}<br>
+        Python::{{python}}<br>
+        Php::{{php}}<br>
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-title>Select to Disable</mat-card-title>
+    <mat-checkbox [(ngModel)]="disable" color="warn"></mat-checkbox>
+    <mat-card-content>
+        <mat-checkbox [disabled]="disable" style="margin:10px 500px 200px 10px;"> Disable Me</mat-checkbox>
+    </mat-card-content>
+</mat-card>

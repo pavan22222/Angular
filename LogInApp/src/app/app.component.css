@@ -1,0 +1,13 @@
+.color{
+    background-color: rgb(47, 196, 255);
+    
+}
+
+.mat-card{
+   padding: 0px;
+}
+
+form,mat-tab{
+    padding: 20px;
+}
+

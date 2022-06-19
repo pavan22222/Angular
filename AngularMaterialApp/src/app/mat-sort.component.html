@@ -1,0 +1,18 @@
+<mat-card>
+    <table border="2" matSort>
+        <thead>
+            <tr>
+                <th mat-sort-header>Id</th>
+                <th mat-sort-header>Name</th>
+                <th mat-sort-header>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>

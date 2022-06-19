@@ -1,0 +1,11 @@
+<mat-card style="padding-top: 200px;">
+
+    <button mat-stroked-button (Clcik)="tooltip.hide()">Hide</button>
+
+    <button mat-stroked-button (Clcik)="tooltip.show()">Show</button>
+
+    <button mat-stroked-button (Clcik)="tooltip.toggle()">Toggle</button>
+
+    <button  #tooltip="matTooltip" matTooltipPosition="after" mat-button matTooltip="I am Pavan"  matTooltipClass="example-tooltip-red"  [matTooltipShowDelay]="0"
+        [matTooltipHideDelay]="0"  [matTooltipDisabled]="false">Click</button>
+</mat-card>

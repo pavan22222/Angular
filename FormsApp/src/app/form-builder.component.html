@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div [formGroup]="myForm" class="form-group" (ngSubmit)="register(myForm)">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name"/><br>
+       
+        <input type="submit" value="Register" class="btn btn-success "/>
+    </div>
+
+    <div formArrayName="aliases" class="form-group" >
+
+        <input type="button" value="Add Form Control" (click)="addControl()" class="btn btn-info "/> <br><br>
+        <div *ngFor="let alias of aliases.controls ; let i=index">
+            <label for="i">Name</label>
+            <input type="text" id="i" class="form-control" [formControlName]="i" /><br>
+        
+        </div>
+       
+    </div>
+
+    <p>{{myForm.value |json}}</p> 
+</div>

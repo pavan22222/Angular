@@ -1,0 +1,13 @@
+<mat-card>
+
+    <section>
+        <h3>Select ProgressBar Type</h3>
+        <mat-radio-group ngModel #mode="ngModel">
+            <mat-radio-button value="determinate">Determinate</mat-radio-button>
+            <mat-radio-button value="indeterminate">Indeterminate</mat-radio-button>
+        </mat-radio-group>
+    </section>
+    <br>
+    <mat-progress-spinner  [mode]="mode.value" value="60"></mat-progress-spinner>
+
+</mat-card>

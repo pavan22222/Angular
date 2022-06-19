@@ -1,0 +1,71 @@
+<div style="padding-bottom: 20px;">
+    <button mat-button (click)="accordion.openAll()">Expand All</button>
+    <button mat-button (click)="accordion.closeAll()">Close All</button>
+</div>
+
+<mat-accordion multi>
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>Employee Data</mat-panel-title>
+            <mat-panel-description>Enter Name and Company</mat-panel-description>
+            <mat-icon style="margin-right: 10px;">account_circle</mat-icon>
+        </mat-expansion-panel-header>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Name</mat-label>
+            <input type="text" matInput [(ngModel)]="name" placeholder="Ex. Pavan">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Company</mat-label>
+            <input type="text" matInput [(ngModel)]="company" placeholder="Ex.Infosys">
+        </mat-form-field>
+        <mat-action-row>
+            <button mat-button  color="primary" (click)="next()">Next</button>
+        </mat-action-row>
+        
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>Check Details</mat-panel-title>
+            <mat-panel-description>Your Name and Company</mat-panel-description>
+            <mat-icon style="margin-right: 10px;">person</mat-icon>
+        </mat-expansion-panel-header>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Your Name</mat-label>
+            <input type="text" matInput [(ngModel)]="name" editable="false">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Your Company</mat-label>
+            <input type="text" matInput [(ngModel)]="company" editable="false">
+        </mat-form-field>
+
+        <mat-action-row>
+            <button mat-button color="accent"  (click)="previous()">Previous</button>
+            <button mat-button color="primary" (click)="next()">Next</button>
+        </mat-action-row>
+       
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step===2" (opened)="setStep(2)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>Pick Date</mat-panel-title>
+            <mat-panel-description>Date Of Join</mat-panel-description>
+            <mat-icon>date</mat-icon>
+        </mat-expansion-panel-header>
+
+        <mat-form-field appeeance="standard">
+            <mat-label>Select Date</mat-label>
+            <input matInput [matDatepicker]="picker" readonly (focus)="picker.open()">
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-action-row>
+            <button mat-button color="accent"  (click)="previous()">Previous</button>
+        </mat-action-row>
+       
+    </mat-expansion-panel>
+</mat-accordion>

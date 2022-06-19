@@ -1,0 +1,50 @@
+<div fxFlexFill fxLayoutAlign="center center">
+  <mat-card fxFlex="400px">
+    <mat-toolbar class="color">LogIn Application</mat-toolbar>
+    <mat-tab-group mat-stretch-tabs animationDuration="0ms">
+      <mat-tab label="Sign In">
+        <form fxLayoutAlign="stretch" fxLayout="column">
+          <mat-form-field>
+            <mat-label >Enter UserName</mat-label>
+            <mat-icon matSuffix color="warn">account_circle</mat-icon>
+            <input matInput type="text">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <mat-label >Enter Password</mat-label>
+            <mat-icon matSuffix color="warn">vpn_key</mat-icon>
+            <input matInput type="password">
+          </mat-form-field>
+    
+          <button mat-raised-button class="color">Sign In
+          </button>
+        </form>
+      </mat-tab>
+      <mat-tab label="Sign Up">
+        <form fxLayoutAlign="center" fxLayout="column">
+          <mat-form-field>
+            <mat-label>Enter UserName</mat-label>
+            <mat-icon color="warn" matSuffix>account_circle</mat-icon>
+            <input matInput type="text">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <mat-label >Enter Password</mat-label>
+            <mat-icon matSuffix color="warn">vpn_key</mat-icon>
+            <input matInput type="password">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label >Confirm Password</mat-label>
+            <mat-icon matSuffix color="warn">vpn_key</mat-icon>
+            <input matInput type="password">
+          </mat-form-field>
+    
+          <button mat-raised-button class="color">Sign Up
+          </button>
+        </form>
+      </mat-tab >
+    </mat-tab-group>
+    
+  </mat-card>
+</div>

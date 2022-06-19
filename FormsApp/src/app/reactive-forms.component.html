@@ -1,0 +1,22 @@
+<div class=" container card border-design" >
+    <div class=" text-center card-title " style="color: blue;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 30px;">Register Details</div>
+    <div class=" form-group ">
+        <form [formGroup]="myForm" (ngSubmit)="register(myForm)">
+            <label for="name">Enter name</label>
+            <input type="text" id="name" formControlName="name" class="form-control text"/>
+            <label for="age">Enter Age</label>
+            <input type="number" id="age" formControlName="age" class="form-control"/>
+            <label for="mobile">Enter Mobile No </label>
+            <input type="text" id="mobile" formControlName="mobile" class="form-control"/>
+            <label for="email">Enter Email </label>
+            <input type="text" id="email" formControlName="email" class="form-control"/>
+            <span *ngIf="emailValidation" style="color: red;">{{ this.emailValidation}}</span>
+            <br>
+            <input type="submit" class="btn btn-primary" value="Register" [disabled]="!myForm.valid"/>
+        </form>
+        <br>
+        <p [hidden]="objHidden">{{myFormObj | json}}</p>
+
+        <p style="color:green">Form Status ::{{myForm.status}}</p>
+    </div>
+</div>

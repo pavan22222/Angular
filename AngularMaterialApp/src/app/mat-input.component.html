@@ -1,0 +1,61 @@
+<mat-form-field appearance="fill">
+    <mat-label>Enter Email</mat-label>
+    <input matInput [formControl]="emailControl" placeholder="Ex. pavan@vrnda.com">
+    <mat-error *ngIf="emailControl.hasError('required')">Email is required</mat-error>
+    <mat-error *ngIf="!emailControl.hasError('required') && emailControl.hasError('email')">Invalid Email Address</mat-error>
+</mat-form-field>
+
+<table>
+    <tr>
+        <td>
+            <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Enter Address1</mat-label>
+            <textarea matInput  placeholder="address1"></textarea>
+            </mat-form-field>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Enter Address2</mat-label>
+            <textarea matInput  placeholder="address2"></textarea>
+            </mat-form-field>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <mat-form-field appearance="fill" >
+            <mat-label>Enter City</mat-label>
+            <input matInput  placeholder="address1">
+            </mat-form-field>
+        </td>
+   
+        <td>
+            <mat-form-field appearance="fill" >
+            <mat-label>Enter State</mat-label>
+            <input matInput  placeholder="address2">
+            </mat-form-field>
+        </td>
+
+        <td>
+            <mat-form-field appearance="fill" >
+            <mat-label>Enter PinCode</mat-label>
+            <input matInput #pincode placeholder="pincode" maxlength="5">
+            <mat-hint align="end">{{pincode.value.length}}/5</mat-hint>
+            </mat-form-field>
+        </td>
+
+        <td>
+            <mat-form-field appearance="fill" >
+            <mat-label>Enter Mobile</mat-label>
+            <span matPrefix>+91</span>
+            <input matInput #phone placeholder="mobile" maxlength="10">
+            <mat-hint align="end">{{phone.value.length}}/10</mat-hint>
+            </mat-form-field>
+        </td>
+    </tr>
+</table>

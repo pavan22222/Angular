@@ -1,0 +1,15 @@
+<h3 style="color:red">String Inter-Polation</h3>
+<div>userName::{{name}}</div>
+
+<h3 style="color:red">Property Binding</h3>
+<p [style]="{color:colorName}">Hello</p>
+
+<input type="text" [(ngModel)]="mobileNumber"><br>
+<p>{{mobileNumber}}</p>
+
+<div>
+<label>Enter Name</label> <input type="text" [(ngModel)]="userName">
+<br>
+<input type="submit" value="Save" (click)="submit()">
+</div>
+<p *ngIf="flag">Record Saved</p>

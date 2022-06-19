@@ -1,0 +1,51 @@
+<div fxFlexFill fxLayoutAlign="center center">
+    <mat-card fxFlex="500px">
+        <mat-toolbar color="primary">LogIn Application</mat-toolbar>
+        <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="Sign In">
+                <form [formGroup]="formGroup" fxLayoutAlign="center" fxLayout="column" (ngSubmit)="submit($event)">
+                    <mat-form-field >
+                        <mat-label>Enter UserName</mat-label>
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                        <input matInput type="text" formControlName="userName">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Enter Password</mat-label>
+                        <mat-icon matSuffix>key</mat-icon>
+                        <input matInput type="text" formControlName="password">
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary">Submit</button>
+                </form>
+            </mat-tab>
+
+            <mat-tab label="Sign Up">
+                <form [formGroup]="formGroup" fxLayout="column" fxLayoutAlign="center" >
+                    <mat-form-field>
+                        <mat-label>Enter UserName</mat-label>
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                        <input matInput type="text" formControlName="userName">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Enter Password</mat-label>
+                        <mat-icon matSuffix>key</mat-icon>
+                        <input matInput type="text" formControlName="password">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Confirm Password</mat-label>
+                        <mat-icon matSuffix>key</mat-icon>
+                        <input matInput type="text" formControlName="password">
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary">Create Account</button>
+                </form>
+
+            </mat-tab>
+
+        </mat-tab-group>
+
+    </mat-card>
+</div>

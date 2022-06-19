@@ -1,0 +1,36 @@
+<!-- <mat-tab-group mat-align-tabs="start" animationDuration="0ms" mat-stretch-tabs>
+    <mat-tab label="Tab1">
+        Tab1
+    </mat-tab>
+
+    <mat-tab label="Tab2">
+        Tab2
+    </mat-tab>
+
+    <mat-tab label="Tab3">
+        Tab3
+    </mat-tab>
+</mat-tab-group> -->
+
+<mat-form-field appearance="fill">
+    <input matInput type="number" [formControl]="selectedIndex">
+</mat-form-field>
+
+<mat-tab-group mat-align-tabs="start" color="accent" backgroundColor="primary"  animationDuration="0ms" headerPosition="above" [selectedIndex]="selectedIndex.value" (selectedIndexChange)="selectedIndex.setValue($event)">
+    <mat-tab  *ngFor="let tab of tabs;let index=index">
+        <ng-template mat-tab-label>
+        <mat-icon>sentiment_neutral</mat-icon>
+        {{tab.label}}</ng-template>
+        <div>
+            {{tab.content}}
+        </div>
+       
+    </mat-tab>
+
+</mat-tab-group>
+
+<p style="margin-left: 0px;">
+    <button mat-button (click)="addTab()" color="primary">Add Tab</button>
+</p>
+
+

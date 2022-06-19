@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-autocomplete #cricketers>
+        <mat-option value="Rohit">
+            Rohit
+        </mat-option>
+        <mat-option value="Kohli">
+            Kohli
+        </mat-option>
+        <mat-option value="Rahul">
+            Rahul
+        </mat-option>
+    </mat-autocomplete>
+
+    <input [(ngModel)]="cricketer" matInput [matAutocomplete]="cricketers">
+    <mat-card-actions style="width: 100%;">
+        <button mat-raised-button style="margin:auto" (click)="openDialog()">Open Link</button>
+
+        <button mat-raised-button (click)="openSmallDialog()">Open Dialog</button>
+
+    </mat-card-actions>
+
+
+    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>Menu</button>
+    <mat-menu #menu>
+        <button mat-menu-item (click)="openDialog()">Open dialog</button>
+    </mat-menu>
+
+    <div>
+        <ol>
+            <mat-label>waht's ur name</mat-label>
+            <li><input [(ngModel)]="name"></li>
+            <li><button mat-flat-button (click)="openDialog1()">open</button></li>
+        </ol>
+
+        <b>Your Fav Animal is::{{animal}}</b>
+    </div>
+</mat-card>

@@ -1,0 +1,29 @@
+<mat-list>
+    <div mat-sub-header>Folders</div>
+    <mat-list-item *ngFor="let folder of folders">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <div mat-line>{{folder.name }}</div>
+        <div mat-line>{{folder.date | date}}</div>
+    </mat-list-item>
+</mat-list>
+
+<mat-divider></mat-divider>
+
+<mat-list>
+    <div mat-sub-header>Folders</div>
+    <mat-list-item *ngFor="let folder of folders">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <div mat-line>{{folder.name }}</div>
+        <div mat-line>{{folder.date | date}}</div>
+    </mat-list-item>
+</mat-list>
+<mat-divider></mat-divider><br>
+<div>
+    <div mat-card-title>Select Brands</div>
+    <mat-selection-list #list [(ngModel)]="brand">
+        <mat-list-option *ngFor="let brand of brands" [value]="brand">{{brand}}</mat-list-option>
+    </mat-selection-list>
+
+    <p>Options Selected ::{{list.selectedOptions.selected.length}}</p>
+    <p>Selected Brand is::{{brand}}</p>
+</div>

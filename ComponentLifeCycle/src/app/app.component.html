@@ -1,0 +1,14 @@
+<div class="row"> 
+
+  <input class="col-3  offset-1 border-danger" type="text" [(ngModel)]="name">
+
+  <input class="col-3  offset-1 border border-info" type="number" [(ngModel)]="age">
+
+  <input class="col-3  offset-1 border border-info" type="number" [(ngModel)]="salary">
+</div>
+
+<app-life-cycle-methods [name]="name" [age]="age" >
+ <h1 #childTemp>{{salary}}</h1>
+</app-life-cycle-methods>
+
+<router-outlet></router-outlet>

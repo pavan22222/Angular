@@ -1,0 +1,25 @@
+<mat-radio-group ngModel #color="ngModel">
+    <label><b>Choose Color</b></label>
+    <mat-radio-button value="primary">
+        Primary
+    </mat-radio-button >
+
+    <mat-radio-button value="accent">
+        Accent
+    </mat-radio-button>
+
+    <mat-radio-button value="warn">
+        Warn
+    </mat-radio-button>
+</mat-radio-group>
+<br>
+<mat-checkbox ngModel #checked="ngModel" >
+    Checked
+</mat-checkbox>&nbsp;&nbsp;
+
+<mat-slide-toggle [color]="color.value" [checked]="checked.value">
+
+</mat-slide-toggle>
+<br>
+
+  

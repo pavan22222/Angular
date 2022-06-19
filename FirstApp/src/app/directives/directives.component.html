@@ -1,0 +1,47 @@
+<div [ngClass]=" true ? 'class1':'class2' " style="text-align:center ;"> First Div</div>
+
+<div [ngClass]="['class1','class2']">Second Div</div>
+
+<div [ngClass]="{class1:true}">Hi</div>
+
+
+
+
+
+
+<div [ngStyle]="classes">Third Div</div>
+
+<div [ngStyle]="{'background-color':getColour()}">Hello Pavan</div>
+
+<div [ngStyle]="{'background-color':colorName}">Hello Pavan</div>
+
+
+
+<select [(ngModel)]="course" (ngModelChange)="select($event)">
+    <option *ngFor="let course of courses" [value]="course" >{{course}}</option>
+</select>
+
+<ng-container *ngIf ="display" [ngSwitch]="course">
+    <div *ngSwitchCase="'B.Tech'">B.Tech is Best Selection</div>
+    <div *ngSwitchCase="'M.B.A'">M.B.A is For Administartion</div>
+    <div *ngSwitchCase="'Degree'">Degree is For Time Pass</div>
+    <div *ngSwitchDefault>Degree is For Time Pass</div>
+</ng-container>
+
+<div *ngIf="value == 1;then firstBlock ;else secondBlock">
+ 
+</div>
+
+<ng-template #firstBlock>
+    <br>First Block
+</ng-template>
+
+<ng-template #secondBlock>
+    <br>Second Block
+</ng-template>
+
+<ng-template #thirdBlock>
+    <br>Third Block
+</ng-template>
+
+

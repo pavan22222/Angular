@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-title>Radio Button Example</mat-card-title>
+    <mat-card-content>
+        <mat-radio-group #gender="ngModel" ngModel>
+            <mat-radio-button *ngFor="let gender of genders" [value]="gender">{{gender}}</mat-radio-button>
+        </mat-radio-group>
+    </mat-card-content>
+
+    <p>Your Gender is::{{gender.value}}<b></b></p>
+</mat-card>

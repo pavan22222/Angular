@@ -1,0 +1,31 @@
+<div class="container panel panel-primary">
+    <p class="text-center panel-heading"
+        style="color: greenyellow;font-family: Arial, Helvetica, sans-serif;font-size: 20px;"> Employees List</p>
+    <div class="panel-body">
+
+        <table class="table table-striped">
+            <thead>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let employee of employees ;let i=index" [class.selected]="id == i">
+                    <td>{{i+1}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.age}}</td>
+                    <td>{{employee.email}}</td>
+                    <td ><input type="button" class="btn btn-info" value="Update"  (click)="update(i)" />&nbsp; &nbsp;
+                        <input type="button" class="btn btn-info" value="Delete" (click)="delete(i)"/>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

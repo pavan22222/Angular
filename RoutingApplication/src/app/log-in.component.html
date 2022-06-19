@@ -1,0 +1,13 @@
+
+<div >
+    <label>Enter UserName</label>&nbsp;<input type="text" [(ngModel)]="userName"><br>
+    <label>Enter Password</label>&nbsp;<input type="text" [(ngModel)]="password"><br>
+
+    <input type="button" style="color: yellow" value="Log In" (click)="logIn()"><br>
+
+    <div *ngIf="validStatus">
+        <h1 [ngStyle]="{'color':colorValue}">{{validStatus}}</h1>
+    </div>
+
+    
+</div>

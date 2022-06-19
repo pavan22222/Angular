@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  mat-tab{
+    margin-left:400px;
+}

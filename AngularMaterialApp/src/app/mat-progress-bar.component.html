@@ -1,0 +1,43 @@
+<mat-card>
+    <mat-card-title>Progress Bar Configuration</mat-card-title>
+    <mat-card-content>
+        <section class="padding-class">
+            <h3>Select ProgressBar Color</h3>
+            <mat-radio-group [(ngModel)]="color" class="margin-class">
+                <mat-radio-button value="primary">primary</mat-radio-button>
+                <mat-radio-button value="accent">Accent</mat-radio-button>
+                <mat-radio-button value="warn">Warn</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <section class="padding-class">
+            <h3>Select ProgressBar Type</h3>
+            <mat-radio-group [(ngModel)]="mode">
+                <mat-radio-button value="determinate">Determinate</mat-radio-button>
+                <mat-radio-button value="indeterminate">Indeterminate</mat-radio-button>
+                <mat-radio-button value="buffer">Buffer</mat-radio-button>
+                <mat-radio-button value="query">Query</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <section>
+            <label>Progress</label>
+            <mat-slider [(ngModel)]="value"></mat-slider>
+        </section>
+
+        <section *ngIf="mode === 'query'">
+            <label>Buffer</label>
+            <mat-slider [(ngModel)]="bufferedValue"></mat-slider>
+        </section>
+    </mat-card-content>
+</mat-card>
+
+
+<mat-card>
+    <mat-card-content>
+        <section>
+            <h2>Result Progress Bar</h2>
+            <mat-progress-bar [value]="value" [mode]="mode" [color]="color"></mat-progress-bar>
+        </section>
+    </mat-card-content>
+</mat-card>

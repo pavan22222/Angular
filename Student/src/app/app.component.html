@@ -1,0 +1,7 @@
+<div>
+    Month::
+    <select [style]="{color:colorName}" (change)="onChange(selectedMonth)" [(ngModel)]="selectedMonth" >
+        <option *ngFor="let month of months">{{month}}</option>
+    </select>
+
+</div>

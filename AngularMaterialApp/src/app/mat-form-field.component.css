@@ -1,0 +1,10 @@
+div > * , mat-radio-button {
+    margin-left: 10px;
+}
+
+
+
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+  

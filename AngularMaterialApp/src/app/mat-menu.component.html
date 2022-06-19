@@ -1,0 +1,55 @@
+<mat-toolbar color="primary">
+    <button mat-button [matMenuTriggerFor]="settingsMenu">Settings</button>
+    <button mat-button disabled [matMenuTriggerFor]="settingsMenu">Settings</button>
+    <button mat-button  [matMenuTriggerFor]="employeesMenu">Employees</button>
+    <span style="flex: auto;"></span>
+    <button  mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+</mat-toolbar>
+
+
+
+<mat-menu #settingsMenu="matMenu">
+    <menu mat-menu-item>Profile</menu>
+    <menu mat-menu-item>Account</menu>
+</mat-menu>
+
+<mat-divider></mat-divider>
+
+
+
+<mat-menu #menu>
+    <button mat-menu-item>
+        <mat-icon>lock</mat-icon>
+        <span>Lock</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>face</mat-icon>
+        <span>Face</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>fingerprint</mat-icon>
+        <span>Finger Print</span>
+    </button>
+</mat-menu>
+
+<mat-menu #employeesMenu>
+    <button mat-menu-item [matMenuTriggerFor]="selfEmployeesMenu"> Self Employee
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="nonSelfEmployeesMenu">Non Self Employee
+    </button>
+</mat-menu>
+
+<mat-menu #selfEmployeesMenu="matMenu">
+    <button mat-menu-item >Business Man</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item >Real Estate</button>
+</mat-menu>
+
+<mat-menu #nonSelfEmployeesMenu="matMenu">
+    <button mat-menu-item >Software Engineer</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item >Teacher</button>
+</mat-menu>
+

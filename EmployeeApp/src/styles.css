@@ -1,0 +1,16 @@
+
+footer{
+    background-color: blue;
+    color: red;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    height: 70px;
+    width: 100%;
+}
+
+
+
+.selected{
+    background-color: yellowgreen;
+}

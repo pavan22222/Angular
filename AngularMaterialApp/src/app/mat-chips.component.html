@@ -1,0 +1,11 @@
+
+
+
+<mat-form-field>
+    <mat-label>Colors</mat-label>
+    <mat-chip-list #chipList>
+        <mat-chip color="primary" selected>Primary</mat-chip>
+        <mat-chip color="secondary">Secondary</mat-chip>
+    </mat-chip-list>
+    <input [matChipInputFor]="chipList" width="1000px">
+</mat-form-field>
